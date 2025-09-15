@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: {{ include "customer.fullname" . }}-replicaset # Helm template function to generate a name
+  labels:
+    {{- include "customer.labels" . | nindent 4 }} # Helm template function to include common labels
+spec:
+  replicas: {{ .Values.replicaCount }} # Value from values.yaml
+  selector:
+    matchLabels:
+      app: {{ include "customer.name" . }} # Label to select Pods
+      tier: {{ .Values.tier }} # Another label for selection
+  template:
+    metadata:
+      labels:
+        app: {{ include "customer.name" . }}
+        tier: {{ .Values.tier }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}" # Image details from values.yaml
+          ports:
+            - containerPort: {{ .Values.service.port }} # Port from values.yaml

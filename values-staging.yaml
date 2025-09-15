@@ -1,0 +1,19 @@
+
+global:
+  namespace: staging
+  logLevel: info
+svc-a:
+  image:
+    tag: staging-latest
+  replicaCount: 2
+  config:
+    APP_ENV: "staging"
+  secrets:
+    DB_USER: "stageuser"
+    DB_PASS: "stagepass"
+svc-b:
+  image:
+    tag: staging-latest
+  replicaCount: 2
+  config:
+    APP_ENV: "staging"

@@ -1,0 +1,36 @@
+
+global:
+  imageRegistry: localhost
+  logLevel: info
+  ingressClassName: nginx
+  namespace: dev
+
+svc-a:
+  enabled: true
+  image:
+    repository: localhost/svc-a
+    tag: "latest"
+  replicaCount: 2
+  service:
+    port: 8080
+  resources: {}
+  config:
+    APP_ENV: "default"
+  secrets:
+    DB_USER: "user"
+    DB_PASS: "pass"
+
+svc-b:
+  enabled: true
+  image:
+    repository: localhost/svc-b
+    tag: "latest"
+  replicaCount: 2
+  service:
+    port: 8080
+  resources: {}
+  config:
+    APP_ENV: "default"
+  secrets:
+    DB_USER: "user"
+    DB_PASS: "pass"

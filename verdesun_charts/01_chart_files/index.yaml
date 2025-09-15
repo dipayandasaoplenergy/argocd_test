@@ -1,0 +1,80 @@
+apiVersion: v1
+entries:
+  admin:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7273586+05:30"
+    description: A Helm chart for Kubernetes
+    digest: cc808a3d40b07089528666c1034710a3c19368be9050412a1c9a79e3b73139b5
+    name: admin
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/admin-0.1.0.tgz
+    version: 0.1.0
+  customer:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7283574+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 6c464ace0f6fa9a429a0c231d497bb27489a3a9d842aaf10ac94b721c0e6761b
+    name: customer
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/customer-0.1.0.tgz
+    version: 0.1.0
+  delivery:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7283574+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 7a6b3b9f8239f8169d3f42de891e9ca7d596a17c9773a579072fa813e587d8b0
+    name: delivery
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/delivery-0.1.0.tgz
+    version: 0.1.0
+  onboarding:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7283574+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 61456c9c1ee25ae8b40f1b3ed880aafe2bf6c3e85345a35566d820c4300c7208
+    name: onboarding
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/onboarding-0.1.0.tgz
+    version: 0.1.0
+  opensolar:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7298642+05:30"
+    description: A Helm chart for Kubernetes
+    digest: cd322f223fc9870e02d3439ef726d59576cd9104652ec0a709ccb9e3237169ca
+    name: opensolar
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/opensolar-0.1.0.tgz
+    version: 0.1.0
+  payment:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7304053+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 4103770e0a9a0d74800c9469045493c3cd5d3b6a5411d8810365b74146166cc6
+    name: payment
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/payment-0.1.0.tgz
+    version: 0.1.0
+  vendor:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-02T14:51:56.7309305+05:30"
+    description: A Helm chart for Kubernetes
+    digest: ccfe7f4edead35ce3ea148850c37d21eb618a79b0ca70ca326164b767b73f93d
+    name: vendor
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/dipayandasaoplenergy/test/main/vendor-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-09-02T14:51:56.726359+05:30"

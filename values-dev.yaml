@@ -1,0 +1,25 @@
+
+global:
+  namespace: dev
+  logLevel: debug
+svc-a:
+  image:
+    tag: dev-latest
+  replicaCount: 1
+  config:
+    APP_ENV: "dev"
+  secrets:
+    DB_USER: "devuser"
+    DB_PASS: "devpass"
+svc-b:
+  enabled: false
+
+customer:
+  image:
+    tag: dev-latest
+  replicaCount: 3
+  config:
+    APP_ENV: "dev"
+  secrets:
+    DB_USER: "devuser"
+    DB_PASS: "devpass"

@@ -1,0 +1,84 @@
+my-app-helm-prod/
+├── Chart.yaml
+├── values.yaml                 # global defaults (common across envs)
+├── env/                        # env-specific overrides
+│   ├── dev/
+│   │   ├── global-values.yaml
+│   │   ├── admin-values.yaml
+│   │   ├── customer-values.yaml
+│   │   ├── delivery-values.yaml
+│   │   ├── onboarding-values.yaml
+│   │   └── vendor-values.yaml
+│   ├── prod/
+│   │   ├── global-values.yaml
+│   │   ├── admin-values.yaml
+│   │   ├── customer-values.yaml
+│   │   ├── delivery-values.yaml
+│   │   ├── onboarding-values.yaml
+│   │   └── vendor-values.yaml
+│   ├── staging/
+│   │   ├── global-values.yaml
+│   │   ├── admin-values.yaml
+│   │   ├── customer-values.yaml
+│   │   ├── delivery-values.yaml
+│   │   ├── onboarding-values.yaml
+│   │   └── vendor-values.yaml
+│   └── uat/
+│       ├── global-values.yaml
+│       ├── admin-values.yaml
+│       ├── customer-values.yaml
+│       ├── delivery-values.yaml
+│       ├── onboarding-values.yaml
+│       └── vendor-values.yaml
+├── verdesun_charts/             # all service charts
+│   ├── admin/
+│   │   ├── Chart.yaml
+│   │   ├── values.yaml          # base values for admin
+│   │   ├── templates/
+│   │   │   ├── deployment.yaml
+│   │   │   ├── service.yaml
+│   │   │   ├── ingress.yaml
+│   │   │   ├── hpa.yaml
+│   │   │   ├── secrets.yaml
+│   │   │   └── serviceaccount.yaml
+│   ├── customer/
+│   │   ├── Chart.yaml
+│   │   ├── values.yaml          # base values for customer
+│   │   ├── templates/
+│   │   │   ├── deployment.yaml
+│   │   │   ├── service.yaml
+│   │   │   ├── ingress.yaml
+│   │   │   ├── hpa.yaml
+│   │   │   ├── secrets.yaml
+│   │   │   └── serviceaccount.yaml
+│   ├── delivery/
+│   │   ├── Chart.yaml
+│   │   ├── values.yaml
+│   │   ├── templates/
+│   │   │   ├── deployment.yaml
+│   │   │   ├── service.yaml
+│   │   │   ├── ingress.yaml
+│   │   │   ├── hpa.yaml
+│   │   │   ├── secrets.yaml
+│   │   │   └── serviceaccount.yaml
+│   ├── onboarding/
+│   │   ├── Chart.yaml
+│   │   ├── values.yaml
+│   │   ├── templates/
+│   │   │   ├── deployment.yaml
+│   │   │   ├── service.yaml
+│   │   │   ├── ingress.yaml
+│   │   │   ├── hpa.yaml
+│   │   │   ├── secrets.yaml
+│   │   │   └── serviceaccount.yaml
+│   └── vendor/
+│       ├── Chart.yaml
+│       ├── values.yaml
+│       ├── templates/
+│       │   ├── deployment.yaml
+│       │   ├── service.yaml
+│       │   ├── ingress.yaml
+│       │   ├── hpa.yaml
+│       │   ├── secrets.yaml
+│       │   └── serviceaccount.yaml
+└── helmfile.yaml                # optional: manage all services together

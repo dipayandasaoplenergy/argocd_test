@@ -1,0 +1,19 @@
+
+global:
+  namespace: prod
+  logLevel: warn
+svc-a:
+  image:
+    tag: prod-latest
+  replicaCount: 3
+  config:
+    APP_ENV: "prod"
+  secrets:
+    DB_USER: "produser"
+    DB_PASS: "prodpass"
+svc-b:
+  image:
+    tag: prod-latest
+  replicaCount: 3
+  config:
+    APP_ENV: "prod"
