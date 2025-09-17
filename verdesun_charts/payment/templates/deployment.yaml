@@ -4,6 +4,7 @@ metadata:
   name: {{ include "payment.fullname" . }}
   labels:
     {{- include "payment.labels" . | nindent 4 }}
+    {{- include "payment.argocdLabels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

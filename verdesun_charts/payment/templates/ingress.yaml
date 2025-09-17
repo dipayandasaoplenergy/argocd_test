@@ -5,6 +5,7 @@ metadata:
   name: {{ include "payment.fullname" . }}
   labels:
     {{- include "payment.labels" . | nindent 4 }}
+    {{- include "payment.argocdLabels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
