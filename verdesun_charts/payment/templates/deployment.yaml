@@ -2,21 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "payment.fullname" . }}
-  # {{ .Chart.Name }}-{{ .Chart.Version | replace "." "-" }}
   namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
-    # app: mypaymentapp
     {{- include "payment.labels" . | nindent 4 }}
-    {{- include "payment.argocdLabels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      # app: mypaymentapp
       {{- include "payment.selectorLabels" . | nindent 6 }}
-      # {{- include "payment.argocdLabels" . | nindent 4 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -25,7 +20,6 @@ spec:
       {{- end }}
       labels:
         {{- include "payment.labels" . | nindent 8 }}
-        {{- include "payment.argocdLabels" . | nindent 4 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
