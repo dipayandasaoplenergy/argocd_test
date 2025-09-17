@@ -2,7 +2,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "payment.fullname" . }}
+  name: {{ .Chart.Name }}-{{ .Chart.Version | replace "." "-" }}
+  # {{ include "payment.fullname" . }}
   namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
     {{- include "payment.labels" . | nindent 4 }}

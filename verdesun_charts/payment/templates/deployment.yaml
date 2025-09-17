@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "payment.fullname" . }}
+  name: {{ .Chart.Name }}-{{ .Chart.Version | replace "." "-" }}
+  # {{ include "payment.fullname" . }}
   namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
     # app: mypaymentapp
