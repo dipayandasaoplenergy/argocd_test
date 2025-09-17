@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "payment.fullname" . }}
   labels:
+    app: mypaymentapp
     {{- include "payment.labels" . | nindent 4 }}
     {{- include "payment.argocdLabels" . | nindent 4 }}
 spec:
@@ -11,6 +12,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
+      app: mypaymentapp
       {{- include "payment.selectorLabels" . | nindent 6 }}
       {{- include "payment.argocdLabels" . | nindent 4 }}
   template:
