@@ -16,7 +16,7 @@ spec:
     matchLabels:
       # app: mypaymentapp
       {{- include "payment.selectorLabels" . | nindent 6 }}
-      {{- include "payment.argocdLabels" . | nindent 4 }}
+      # {{- include "payment.argocdLabels" . | nindent 4 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
