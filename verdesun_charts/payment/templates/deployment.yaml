@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "payment.fullname" . }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
     # app: mypaymentapp
     {{- include "payment.labels" . | nindent 4 }}
@@ -23,6 +24,7 @@ spec:
       {{- end }}
       labels:
         {{- include "payment.labels" . | nindent 8 }}
+        {{- include "payment.argocdLabels" . | nindent 4 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
