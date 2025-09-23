@@ -1,0 +1,18 @@
+ingress:
+  hosts:
+    - host: prod.chart-example.local
+      paths:
+        - path: /vendor
+          pathType: Prefix
+          backend:
+            service:
+              name: vendor
+              port:
+                number: 80
+        - path: /vendor-alt
+          pathType: Prefix
+          backend:
+            service:
+              name: vendor
+              port:
+                number: 8001

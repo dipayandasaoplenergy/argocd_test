@@ -1,0 +1,18 @@
+ingress:
+  hosts:
+    - host: dev.chart-example.local
+      paths:
+        - path: /onboarding
+          pathType: Prefix
+          backend:
+            service:
+              name: onboarding
+              port:
+                number: 80
+        - path: /onboarding-alt
+          pathType: Prefix
+          backend:
+            service:
+              name: onboarding
+              port:
+                number: 8001

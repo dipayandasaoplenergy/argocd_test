@@ -1,0 +1,18 @@
+ingress:
+  hosts:
+    - host: uat.chart-example.local
+      paths:
+        - path: /delivery
+          pathType: Prefix
+          backend:
+            service:
+              name: delivery
+              port:
+                number: 80
+        - path: /delivery-alt
+          pathType: Prefix
+          backend:
+            service:
+              name: delivery
+              port:
+                number: 8001

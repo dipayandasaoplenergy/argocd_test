@@ -1,0 +1,18 @@
+ingress:
+  hosts:
+    - host: staging.chart-example.local
+      paths:
+        - path: /payment
+          pathType: Prefix
+          backend:
+            service:
+              name: payment
+              port:
+                number: 80
+        - path: /payment-alt
+          pathType: Prefix
+          backend:
+            service:
+              name: payment
+              port:
+                number: 8001
