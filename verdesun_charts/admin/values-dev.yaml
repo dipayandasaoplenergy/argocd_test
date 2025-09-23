@@ -9,3 +9,10 @@ ingress:
               name: admin
               port:
                 number: 80
+        - path: /admin-alt
+          pathType: Prefix
+          backend:
+            service:
+              name: admin
+              port:
+                number: 8001
