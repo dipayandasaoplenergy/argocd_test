@@ -1,0 +1,3 @@
+ingress:
+  hosts:
+    - host: dev.chart-example.local
