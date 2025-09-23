@@ -1,3 +1,11 @@
 ingress:
   hosts:
     - host: dev.chart-example.local
+  paths:
+      - path: /admin
+        pathType: Prefix
+        backend:
+          service:
+            name: admin
+            port:
+              number: 80
